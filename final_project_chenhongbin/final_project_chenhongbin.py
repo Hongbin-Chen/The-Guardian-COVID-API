@@ -16,6 +16,8 @@ import re
 
 def access_data_from_guardian():
     """
+    **While there has been a api package for the Guardian, our package will focus on the news on the Guardian releated to the covid. None of the code is copied/paraphrased from the existed package. If there is any similarity, it would be just a coincidence.
+    
     First discovered in January 2020, we have suffered from COVID-19 for almost a whole year. 
     It is of great urgency to continuously update our knowledge about the virus.
     It is kind of a bummer that the API only return 9 results at a time for public user. However, we are going to design our function in a base of generalizaiton. If wanting to get more result, contact the Guardian Office.
