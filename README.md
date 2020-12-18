@@ -23,11 +23,11 @@ It is kind of a bummer that the API only return 9 results at a time for public u
 
 ## Dependencies
 
-- TODO
+- numpy,pandas,requests, json, re
 
 ## Usage
 
-- TODO
+- see the doctrings part for every functions
 
 ## Documentation
 
