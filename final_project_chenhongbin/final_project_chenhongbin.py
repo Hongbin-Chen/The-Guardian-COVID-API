@@ -156,6 +156,9 @@ results = focus_on_results('results')
 results[0:3]
 
 
+#The following functions are designed for the analysis of the data in "results". The main purpose is to help the users to find the news they want to learn about by using the features shown in the data.
+
+
 # In[10]:
 
 
@@ -230,6 +233,46 @@ def news_type(value):
 #Example1 code:
 news_type('video')
 #Noted: there are lots of type of news, including article, video and so on. The 9 reuslts we got are not exhausted all the types.
+
+
+# In[14]:
+
+
+def Num_of_news(time):
+    """
+    Some researchers would like to use how many news there are in a certain time period to estimate the heat/trend of a certain topic.
+    This function is designed for these researchers to count the number of COVID-related news in each months or date.
+    
+    -----------
+    Input:
+    time = the time period the users want to look into
+    the form of the input should be "YYYY-MM" or "YYYY-MM-DD".
+    
+    ---------
+    Output:
+    the number of COVID-related news in the specific period.
+    
+    Example1:
+    Num_of_news('2020-11')
+    5
+    
+    Example2:
+    Num_of_news('2020-12-01')
+    2
+
+    """
+    NewsCounting = [i for i in results['webPublicationDate'] if re.search(time, i)]
+    Num_of_news = len(NewsCounting)
+    print(Num_of_news)
+
+
+# In[15]:
+
+
+#Example code:
+Num_of_news('2020-11')
+Num_of_news('2020-12-01')
+
 
 
 
